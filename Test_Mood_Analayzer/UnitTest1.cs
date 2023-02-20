@@ -16,7 +16,7 @@ namespace Test_Mood_Analayzer
         [TestCase("SAD")]
         [TestCase("i am sad")]
         [TestCase("i am in sad mood")]
-        [TestCase("I AM not SAD")]
+        [TestCase("I AM SAD")]
         public void test_TO_checkMood_FOR_SAD(string input)
         {
            Mood mood = new Mood(input);
@@ -30,6 +30,8 @@ namespace Test_Mood_Analayzer
         [TestCase("i am happy")]
         [TestCase("i am not in sad mood")]
         [TestCase("I AM in any mood")]
+        
+
         public void test_TO_checkMood_FOR_HAPPY(string moodinput)
         {
            Mood mood = new Mood(moodinput);

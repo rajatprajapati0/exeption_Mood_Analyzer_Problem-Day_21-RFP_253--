@@ -13,33 +13,35 @@ namespace Mood_Analyzer
 
     public class Mood
     {
+
         public string mood;
-        public Mood(string mood) 
+
+        public Mood()
+        {
+            mood = " ";
+        }
+
+        public Mood(string mood)
         {
             this.mood = mood;
-        
+
         }
-        
+
         public string checkMood()
         {
-
-            Regex mood = new Regex(MoodPattern.sadmood);
+            Regex mood1 = new Regex(MoodPattern.sadmood);
             string mymood=this.mood;
-            bool check = mood.IsMatch(mymood.ToLower());
-            if (check == true)
+            if (mood1.IsMatch(mymood.ToLower()))
             {
-                mymood = "SAD";
+                return "SAD";
             }
             else
             {
-                mymood = "HAPPY";
+                return "HAPPY";
 
-          
             }
-
-            return mymood;
-
         }
 
     }
-}
+ }
+
