@@ -11,7 +11,7 @@ namespace Test_Mood_Analayzer
         {
             
         }
-
+        //TC.2.1
         [TestCase("sad")]
         [TestCase("SAD")]
         [TestCase("i am sad")]
@@ -30,7 +30,7 @@ namespace Test_Mood_Analayzer
         [TestCase("i am happy")]
         [TestCase("i am not in sad mood")]
         [TestCase("I AM in any mood")]
-        
+        [TestCase(null)]
 
         public void test_TO_checkMood_FOR_HAPPY(string moodinput)
         {
