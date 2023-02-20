@@ -30,9 +30,11 @@ namespace Mood_Analyzer
         public string checkMood()
         {
             Regex mood = new Regex(MoodPattern.sadmood);
-            string mymood=this.mood;
+                      string mymood = this.mood;
+
             try
-            {
+            {       if (mymood == null)
+                { throw new MoodAnalysisException(); }
 
                      if (mood.IsMatch(mymood.ToLower()))
                      {
@@ -45,10 +47,10 @@ namespace Mood_Analyzer
                      }
                 
             }
-            catch (Exception ex)
+            catch (MoodAnalysisException )
             {
-             
-                return "HAPPY"; 
+                return "nullmood";
+                
 
             }
 
